@@ -3,11 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/style.css">
+    <script type="module" src="./src/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Palette Picker</title>
   </head>
+  <h1>Palette Picker</h1>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="app">
+      <section class="add-palette">
+        <div class="box">        
+          <form action="" id="palette-form">
+          <h2 id="form-title">Add a Palette</h2>
+          <label for="palette-title">Palette Title:</label>
+          <input type="text"  id="title" placeholder="Enter palette name" name="title" required/>
+
+          <div class="colors">
+            <label for="color1">Color #1 </label>
+            <input type="color" id="color1" name="color1" value="#FF0000">
+
+            <label for="color2">Color #2 </label>
+            <input type="color" id="color2" name="color2" value="#00FF00">
+
+            <label for="color3">Color #3 </label>
+            <input type="color" id="color3" name="color3" value="#0000FF">
+          </div>
+
+          <div class="temp">
+            <legend>Temperature:</legend>
+            <label><input type="radio" value="warm" name="temperature" required/>Warm</label>
+            <label><input type="radio" value="neutral" name="temperature" required/>Neutral</label>
+            <label><input type="radio" value="cool" name="temperature" required/>Cool</label>
+          </div>
+          
+          <button id="button" type="submit">Create Palette</button>
+      </div>
+      </section>
+
+      <section class="palettes">
+        <h2>Palettes</h2>
+        <div class="palette-container" id="palette-container">
+            <ul id="list">
+              
+            </ul>
+        </div>
+      </section>
+    </div>
   </body>
-</html>
+  </html>
